@@ -3,21 +3,31 @@
 </script>
 
 <svelte:head>
-	<title>みんなで支え合う - 困ったときはお互い様</title>
-	<meta name="description" content="日常の小さな困りごとを、みんなで支え合うプラットフォーム" />
+	<title>Kampa - 支援プラットフォーム</title>
+	<meta name="description" content="Kampaで温かい支援の輪を広げましょう" />
 </svelte:head>
 
-<!-- ヒーローセクション -->
-<section
-	class="flex min-h-screen items-center bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50"
->
-	<div class="container mx-auto px-4 py-16">
+<!-- ヒーロー画像セクション -->
+<section class="relative">
+	<img
+		src="/randing_top.webp"
+		alt="Kampa ヒーロー画像"
+		class="h-[800px] w-full object-cover object-top"
+	/>
+	<!-- 透かしオーバーレイ -->
+	<div
+		class="absolute inset-0 bg-gradient-to-br from-orange-50/60 via-amber-50/60 to-yellow-50/60"
+	></div>
+</section>
+
+<!-- 説明文セクション -->
+<section class="bg-white py-20">
+	<div class="container mx-auto px-4">
 		<div class="mx-auto max-w-4xl text-center">
 			<!-- メインタイトル -->
-			<div class="mb-8">
+			<div class="mb-12">
 				<h1 class="mb-6 text-4xl leading-tight font-bold text-gray-800 md:text-5xl">
-					<span class="text-orange-600">困ったときは</span><br />
-					<span class="text-amber-600">お互い様</span>
+					<span class="text-orange-600">Kampa</span>
 				</h1>
 				<p class="mb-8 text-xl font-light text-gray-700 md:text-2xl">
 					日常の小さな困りごとを、<br class="md:hidden" />
@@ -265,10 +275,10 @@
 	<div class="container mx-auto px-4">
 		<div class="mx-auto max-w-4xl text-center">
 			<div class="mb-8">
-				<h3 class="mb-4 text-2xl font-bold text-blue-400">困ったときはお互い様</h3>
+				<h3 class="mb-4 text-2xl font-bold text-orange-400">Kampa</h3>
 				<p class="text-gray-300">みんなで支え合う、温かいコミュニティ</p>
 			</div>
-			<div class="text-sm text-gray-400">© 2024 みんなで支え合う. All rights reserved.</div>
+			<div class="text-sm text-gray-400">© 2024 Kampa. All rights reserved.</div>
 		</div>
 	</div>
 </footer>

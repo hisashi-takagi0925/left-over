@@ -11,9 +11,10 @@
 			<div class="flex items-center">
 				<a
 					href="/"
-					class="text-2xl font-bold text-orange-600 transition-colors hover:text-orange-700"
+					class="flex items-center space-x-2 text-2xl font-bold text-orange-600 transition-colors hover:text-orange-700"
 				>
-					💝 困ったときはお互い様
+					<img src="/logo.svg" alt="Kampa" class="h-8 w-8" />
+					<span>Kampa</span>
 				</a>
 			</div>
 

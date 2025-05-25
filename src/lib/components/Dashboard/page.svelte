@@ -3,8 +3,8 @@
 </script>
 
 <svelte:head>
-	<title>ダッシュボード - 困ったときはお互い様</title>
-	<meta name="description" content="困ったときはお互い様 ダッシュボード" />
+	<title>ダッシュボード - Kampa</title>
+	<meta name="description" content="Kampa ダッシュボード" />
 </svelte:head>
 
 <!-- ウェルカムセクション -->
@@ -12,7 +12,7 @@
 	<div class="container mx-auto px-4">
 		<div class="mx-auto max-w-4xl text-center">
 			<h1 class="mb-8 text-4xl font-bold text-gray-900">
-				ようこそ、<span class="text-orange-500">困ったときはお互い様</span>へ
+				ようこそ、<span class="text-orange-500">Kampa</span>へ
 			</h1>
 			{#if $user}
 				<p class="mb-8 text-xl text-gray-600">
