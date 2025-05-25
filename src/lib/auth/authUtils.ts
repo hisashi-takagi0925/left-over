@@ -64,5 +64,10 @@ export async function handleRedirectCallback() {
 		}
 	} catch (error) {
 		console.error('Redirect callback error:', error);
+		console.error('Error details:', JSON.stringify(error, null, 2));
+		// エラーが発生してもローディング状態を解除
+		isLoading.set(false);
+	} finally {
+		isLoading.set(false);
 	}
 }
