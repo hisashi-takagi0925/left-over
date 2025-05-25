@@ -13,3 +13,139 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id          String   @id @default(uuid())
+  auth0Id     String   @unique @map("auth0_id")
+  nickname    String
+  email       String   @unique
+  avatar      String?
+  bio         String?
+  trustScore  Int      @default(100) @map("trust_score")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  posts         Post[]
+  donations     Donation[]
+  deposits      Deposit[]
+  autodonations AutoDonation[]
+  reports       Report[]       @relation("ReportedBy")
+  reportedUsers Report[]       @relation("ReportedUser")
+  adminLogs     AdminLog[]
+  thanksReceived Thanks[]      @relation("ThanksReceiver")
+
+  @@map("users")
+}
+
+model Post {
+  id              String   @id @default(uuid())
+  userId          String   @map("user_id")
+  category        String
+  title           String
+  content         String
+  amountRequested Decimal  @map("amount_requested")
+  status          String   @default("active") // active, completed, cancelled
+  isPrivate       Boolean  @default(false) @map("is_private")
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  donations Donation[]
+  reports   Report[]
+
+  @@map("posts")
+}
+
+model Donation {
+  id        String   @id @default(uuid())
+  postId    String   @map("post_id")
+  userId    String   @map("user_id")
+  amount    Decimal
+  message   String?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  // Relations
+  post   Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  user   User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  thanks Thanks[]
+
+  @@map("donations")
+}
+
+model Deposit {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  amount    Decimal
+  type      String   // charge, withdraw, donation
+  status    String   @default("pending") // pending, completed, failed
+  stripeId  String?  @map("stripe_id")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("deposits")
+}
+
+model AutoDonation {
+  id            String    @id @default(uuid())
+  userId        String    @map("user_id")
+  category      String
+  amount        Decimal
+  schedule      String    // daily, weekly, monthly
+  isActive      Boolean   @default(true) @map("is_active")
+  nextExecution DateTime? @map("next_execution")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("autodonations")
+}
+
+model Thanks {
+  id         String   @id @default(uuid())
+  donationId String   @map("donation_id")
+  receiverId String   @map("receiver_id")
+  message    String
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  // Relations
+  donation Donation @relation(fields: [donationId], references: [id], onDelete: Cascade)
+  receiver User     @relation("ThanksReceiver", fields: [receiverId], references: [id], onDelete: Cascade)
+
+  @@map("thanks")
+}
+
+model Report {
+  id           String   @id @default(uuid())
+  reportedBy   String   @map("reported_by")
+  targetUserId String?  @map("target_user_id")
+  postId       String?  @map("post_id")
+  reason       String
+  status       String   @default("pending") // pending, reviewed, resolved
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  // Relations
+  reporter   User  @relation("ReportedBy", fields: [reportedBy], references: [id], onDelete: Cascade)
+  targetUser User? @relation("ReportedUser", fields: [targetUserId], references: [id], onDelete: Cascade)
+  post       Post? @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  @@map("reports")
+}
+
+model AdminLog {
+  id        String   @id @default(uuid())
+  adminId   String   @map("admin_id")
+  action    String
+  details   String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  // Relations
+  admin User @relation(fields: [adminId], references: [id], onDelete: Cascade)
+
+  @@map("admin_logs")
+}
