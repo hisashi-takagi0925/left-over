@@ -3,8 +3,8 @@
 </script>
 
 <svelte:head>
-	<title>ダッシュボード - Left Over</title>
-	<meta name="description" content="Left Over ダッシュボード" />
+	<title>ダッシュボード - 困ったときはお互い様</title>
+	<meta name="description" content="困ったときはお互い様 ダッシュボード" />
 </svelte:head>
 
 <!-- ウェルカムセクション -->
@@ -12,7 +12,7 @@
 	<div class="container mx-auto px-4">
 		<div class="mx-auto max-w-4xl text-center">
 			<h1 class="mb-8 text-4xl font-bold text-gray-900">
-				ようこそ、<span class="text-orange-500">Left Over</span>へ
+				ようこそ、<span class="text-orange-500">困ったときはお互い様</span>へ
 			</h1>
 			{#if $user}
 				<p class="mb-8 text-xl text-gray-600">
@@ -32,201 +32,247 @@
 			<h2 class="mb-12 text-center text-3xl font-bold text-gray-900">何をしますか？</h2>
 
 			<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-				<!-- 支援する -->
-				<div
+				<!-- 支援案件を見る -->
+				<a
+					href="/top"
 					class="group cursor-pointer rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
 				>
 					<div
 						class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-orange-100 group-hover:bg-orange-200"
 					>
-						<svg
-							class="h-10 w-10 text-orange-500"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
-							></path>
-						</svg>
+						<span class="text-3xl">💝</span>
 					</div>
-					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">支援する</h3>
+					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">支援案件を見る</h3>
 					<p class="text-center leading-relaxed text-gray-600">
 						困っている人に温かい支援の気持ちを届けましょう
 					</p>
-				</div>
+				</a>
 
-				<!-- 支援を受け取る -->
-				<div
+				<!-- 支援を募集する -->
+				<a
+					href="/new"
 					class="group cursor-pointer rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
 				>
 					<div
 						class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-green-100 group-hover:bg-green-200"
 					>
-						<svg
-							class="h-10 w-10 text-green-500"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zM3 9a2 2 0 012-2h14a2 2 0 012 2v1a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-							></path>
-						</svg>
+						<span class="text-3xl">📝</span>
 					</div>
-					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">支援を受け取る</h3>
+					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">支援を募集する</h3>
 					<p class="text-center leading-relaxed text-gray-600">
 						困りごとを投稿して温かい支援を受け取りましょう
 					</p>
-				</div>
+				</a>
 
-				<!-- 履歴を見る -->
-				<div
+				<!-- プロフィール -->
+				<a
+					href="/profile"
 					class="group cursor-pointer rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
 				>
 					<div
 						class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200"
 					>
-						<svg
-							class="h-10 w-10 text-blue-500"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-							></path>
-						</svg>
+						<span class="text-3xl">👤</span>
 					</div>
-					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">履歴を見る</h3>
+					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">プロフィール</h3>
 					<p class="text-center leading-relaxed text-gray-600">
-						これまでの支援の送受信履歴を確認できます
+						寄付履歴や信頼スコアを確認できます
 					</p>
-				</div>
+				</a>
 
-				<!-- プロフィール設定 -->
-				<div
+				<!-- デポジット管理 -->
+				<a
+					href="/deposits"
 					class="group cursor-pointer rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
 				>
 					<div
 						class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-200"
 					>
-						<svg
-							class="h-10 w-10 text-purple-500"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-							></path>
-						</svg>
+						<span class="text-3xl">💳</span>
 					</div>
-					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">プロフィール設定</h3>
+					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">デポジット管理</h3>
 					<p class="text-center leading-relaxed text-gray-600">
-						あなたのプロフィール情報を編集・更新できます
+						残高確認、チャージ、払い戻しを行えます
 					</p>
-				</div>
+				</a>
 
-				<!-- 設定 -->
-				<div
+				<!-- 自動寄付設定 -->
+				<a
+					href="/autodonations"
 					class="group cursor-pointer rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
 				>
 					<div
-						class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-gray-100 group-hover:bg-gray-200"
+						class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-indigo-100 group-hover:bg-indigo-200"
 					>
-						<svg
-							class="h-10 w-10 text-gray-500"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-							></path>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-							></path>
-						</svg>
+						<span class="text-3xl">⚡</span>
 					</div>
-					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">設定</h3>
-					<p class="text-center leading-relaxed text-gray-600">
-						アプリの各種設定や通知設定を変更できます
-					</p>
-				</div>
+					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">自動寄付設定</h3>
+					<p class="text-center leading-relaxed text-gray-600">継続的な支援を手軽に実現できます</p>
+				</a>
 
-				<!-- ヘルプ -->
-				<div
+				<!-- お礼メッセージ -->
+				<a
+					href="/thanks"
 					class="group cursor-pointer rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
 				>
 					<div
-						class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-yellow-100 group-hover:bg-yellow-200"
+						class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-pink-100 group-hover:bg-pink-200"
 					>
-						<svg
-							class="h-10 w-10 text-yellow-500"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-							></path>
-						</svg>
+						<span class="text-3xl">💌</span>
 					</div>
-					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">ヘルプ</h3>
+					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">お礼メッセージ</h3>
 					<p class="text-center leading-relaxed text-gray-600">
-						使い方やよくある質問を確認できます
+						寄付後の温かいコミュニケーションを大切に
 					</p>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- 統計情報セクション -->
+<section class="bg-gray-50 py-20">
+	<div class="container mx-auto px-4">
+		<div class="mx-auto max-w-6xl">
+			<h2 class="mb-12 text-center text-3xl font-bold text-gray-900">プラットフォーム統計</h2>
+
+			<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+				<div class="rounded-2xl bg-white p-6 text-center shadow-lg">
+					<div class="text-3xl font-bold text-orange-600">1,234</div>
+					<div class="text-sm text-gray-600">総支援案件数</div>
+				</div>
+				<div class="rounded-2xl bg-white p-6 text-center shadow-lg">
+					<div class="text-3xl font-bold text-green-600">¥5,678,900</div>
+					<div class="text-sm text-gray-600">総寄付金額</div>
+				</div>
+				<div class="rounded-2xl bg-white p-6 text-center shadow-lg">
+					<div class="text-3xl font-bold text-blue-600">2,345</div>
+					<div class="text-sm text-gray-600">アクティブユーザー</div>
+				</div>
+				<div class="rounded-2xl bg-white p-6 text-center shadow-lg">
+					<div class="text-3xl font-bold text-purple-600">987</div>
+					<div class="text-sm text-gray-600">解決済み案件</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- 最近のアクティビティセクション -->
-<section class="bg-gray-50 py-20">
+<!-- 最近の支援案件セクション -->
+<section class="bg-white py-20">
+	<div class="container mx-auto px-4">
+		<div class="mx-auto max-w-6xl">
+			<div class="mb-12 flex items-center justify-between">
+				<h2 class="text-3xl font-bold text-gray-900">最近の支援案件</h2>
+				<a href="/top" class="text-orange-600 hover:text-orange-700">すべて見る →</a>
+			</div>
+
+			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+				<!-- サンプル案件1 -->
+				<div class="rounded-2xl border border-gray-100 bg-white p-6 shadow-lg">
+					<div class="mb-4 flex items-center space-x-2">
+						<span class="rounded-full bg-red-100 px-2 py-1 text-xs text-red-800">医療</span>
+						<span class="text-xs text-gray-500">2時間前</span>
+					</div>
+					<h3 class="mb-2 font-semibold text-gray-900">手術費用のご支援をお願いします</h3>
+					<p class="mb-4 text-sm text-gray-600">
+						突然の病気で手術が必要になりました。医療費の一部をご支援いただけると助かります。
+					</p>
+					<div class="mb-4">
+						<div class="mb-2 flex justify-between text-sm">
+							<span>進捗</span>
+							<span>¥150,000 / ¥500,000</span>
+						</div>
+						<div class="h-2 rounded-full bg-gray-200">
+							<div class="h-2 w-1/3 rounded-full bg-orange-500"></div>
+						</div>
+					</div>
+					<a href="/post/1" class="text-sm text-orange-600 hover:text-orange-700">詳細を見る →</a>
+				</div>
+
+				<!-- サンプル案件2 -->
+				<div class="rounded-2xl border border-gray-100 bg-white p-6 shadow-lg">
+					<div class="mb-4 flex items-center space-x-2">
+						<span class="rounded-full bg-blue-100 px-2 py-1 text-xs text-blue-800">教育</span>
+						<span class="text-xs text-gray-500">5時間前</span>
+					</div>
+					<h3 class="mb-2 font-semibold text-gray-900">子どもの学習環境整備</h3>
+					<p class="mb-4 text-sm text-gray-600">
+						家庭の事情で学習環境が整わない子どもたちのために、教材や設備の支援をお願いします。
+					</p>
+					<div class="mb-4">
+						<div class="mb-2 flex justify-between text-sm">
+							<span>進捗</span>
+							<span>¥80,000 / ¥200,000</span>
+						</div>
+						<div class="h-2 rounded-full bg-gray-200">
+							<div class="h-2 w-2/5 rounded-full bg-blue-500"></div>
+						</div>
+					</div>
+					<a href="/post/2" class="text-sm text-orange-600 hover:text-orange-700">詳細を見る →</a>
+				</div>
+
+				<!-- サンプル案件3 -->
+				<div class="rounded-2xl border border-gray-100 bg-white p-6 shadow-lg">
+					<div class="mb-4 flex items-center space-x-2">
+						<span class="rounded-full bg-yellow-100 px-2 py-1 text-xs text-yellow-800">災害</span>
+						<span class="text-xs text-gray-500">1日前</span>
+					</div>
+					<h3 class="mb-2 font-semibold text-gray-900">災害復旧支援</h3>
+					<p class="mb-4 text-sm text-gray-600">
+						自然災害により住居が被害を受けました。生活再建のためのご支援をお願いします。
+					</p>
+					<div class="mb-4">
+						<div class="mb-2 flex justify-between text-sm">
+							<span>進捗</span>
+							<span>¥300,000 / ¥1,000,000</span>
+						</div>
+						<div class="h-2 rounded-full bg-gray-200">
+							<div class="h-2 w-1/3 rounded-full bg-yellow-500"></div>
+						</div>
+					</div>
+					<a href="/post/3" class="text-sm text-orange-600 hover:text-orange-700">詳細を見る →</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- お知らせセクション -->
+<section class="bg-orange-50 py-20">
 	<div class="container mx-auto px-4">
 		<div class="mx-auto max-w-4xl">
-			<h2 class="mb-12 text-center text-3xl font-bold text-gray-900">最近のアクティビティ</h2>
+			<h2 class="mb-12 text-center text-3xl font-bold text-gray-900">お知らせ</h2>
 
-			<div class="rounded-2xl bg-white p-8 shadow-lg">
-				<div class="text-center text-gray-500">
-					<svg
-						class="mx-auto mb-4 h-16 w-16 text-gray-300"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-						></path>
-					</svg>
-					<p class="text-lg">まだアクティビティがありません</p>
-					<p class="mt-2 text-sm">支援を始めると、ここに履歴が表示されます</p>
+			<div class="space-y-4">
+				<div class="rounded-2xl bg-white p-6 shadow-lg">
+					<div class="flex items-start space-x-4">
+						<div class="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100">
+							<span class="text-orange-600">📢</span>
+						</div>
+						<div class="flex-1">
+							<h3 class="font-semibold text-gray-900">新機能：自動寄付設定が追加されました</h3>
+							<p class="mt-1 text-sm text-gray-600">
+								継続的な支援をより簡単に行えるよう、自動寄付機能を追加しました。
+							</p>
+							<div class="mt-2 text-xs text-gray-500">2024年11月20日</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="rounded-2xl bg-white p-6 shadow-lg">
+					<div class="flex items-start space-x-4">
+						<div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100">
+							<span class="text-blue-600">🔒</span>
+						</div>
+						<div class="flex-1">
+							<h3 class="font-semibold text-gray-900">セキュリティ強化のお知らせ</h3>
+							<p class="mt-1 text-sm text-gray-600">
+								より安全にご利用いただくため、セキュリティ機能を強化いたしました。
+							</p>
+							<div class="mt-2 text-xs text-gray-500">2024年11月15日</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

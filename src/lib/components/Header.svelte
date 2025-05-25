@@ -56,6 +56,34 @@
 					>
 						デポジット
 					</a>
+					<a
+						href="/autodonations"
+						class="font-medium text-gray-700 transition-colors hover:text-blue-600 {$page.url
+							.pathname === '/autodonations'
+							? 'text-blue-600'
+							: ''}"
+					>
+						自動寄付
+					</a>
+					<a
+						href="/thanks"
+						class="font-medium text-gray-700 transition-colors hover:text-blue-600 {$page.url
+							.pathname === '/thanks'
+							? 'text-blue-600'
+							: ''}"
+					>
+						お礼
+					</a>
+					<!-- 管理者リンク（実際の実装では管理者権限チェックが必要） -->
+					<a
+						href="/admin"
+						class="font-medium text-gray-700 transition-colors hover:text-red-600 {$page.url
+							.pathname === '/admin'
+							? 'text-red-600'
+							: ''}"
+					>
+						管理
+					</a>
 				{/if}
 			</nav>
 
@@ -147,6 +175,33 @@
 							: ''}"
 					>
 						デポジット
+					</a>
+					<a
+						href="/autodonations"
+						class="block rounded-md px-3 py-2 text-gray-700 transition-colors hover:bg-gray-50 hover:text-blue-600 {$page
+							.url.pathname === '/autodonations'
+							? 'bg-blue-50 text-blue-600'
+							: ''}"
+					>
+						自動寄付
+					</a>
+					<a
+						href="/thanks"
+						class="block rounded-md px-3 py-2 text-gray-700 transition-colors hover:bg-gray-50 hover:text-blue-600 {$page
+							.url.pathname === '/thanks'
+							? 'bg-blue-50 text-blue-600'
+							: ''}"
+					>
+						お礼
+					</a>
+					<a
+						href="/admin"
+						class="block rounded-md px-3 py-2 text-gray-700 transition-colors hover:bg-gray-50 hover:text-red-600 {$page
+							.url.pathname === '/admin'
+							? 'bg-red-50 text-red-600'
+							: ''}"
+					>
+						管理
 					</a>
 					<div class="mt-2 border-t border-gray-200 px-3 py-2 pt-4">
 						<div class="mb-3 flex items-center space-x-3">
