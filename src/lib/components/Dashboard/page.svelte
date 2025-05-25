@@ -16,10 +16,10 @@
 			</h1>
 			{#if $user}
 				<p class="mb-8 text-xl text-gray-600">
-					{$user.name || $user.email}さん、投げ銭を始めましょう！
+					{$user.name || $user.email}さん、支援を始めましょう！
 				</p>
 			{:else}
-				<p class="mb-8 text-xl text-gray-600">投げ銭を始めましょう！</p>
+				<p class="mb-8 text-xl text-gray-600">支援を始めましょう！</p>
 			{/if}
 		</div>
 	</div>
@@ -32,7 +32,7 @@
 			<h2 class="mb-12 text-center text-3xl font-bold text-gray-900">何をしますか？</h2>
 
 			<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-				<!-- 投げ銭する -->
+				<!-- 支援する -->
 				<div
 					class="group cursor-pointer rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
 				>
@@ -53,13 +53,13 @@
 							></path>
 						</svg>
 					</div>
-					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">投げ銭する</h3>
+					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">支援する</h3>
 					<p class="text-center leading-relaxed text-gray-600">
-						気になる人に感謝の気持ちを投げ銭で表現しましょう
+						困っている人に温かい支援の気持ちを届けましょう
 					</p>
 				</div>
 
-				<!-- 投げ銭を受け取る -->
+				<!-- 支援を受け取る -->
 				<div
 					class="group cursor-pointer rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
 				>
@@ -80,9 +80,9 @@
 							></path>
 						</svg>
 					</div>
-					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">投げ銭を受け取る</h3>
+					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">支援を受け取る</h3>
 					<p class="text-center leading-relaxed text-gray-600">
-						あなたのプロフィールを公開して投げ銭を受け取りましょう
+						困りごとを投稿して温かい支援を受け取りましょう
 					</p>
 				</div>
 
@@ -109,7 +109,7 @@
 					</div>
 					<h3 class="mb-4 text-center text-xl font-semibold text-gray-900">履歴を見る</h3>
 					<p class="text-center leading-relaxed text-gray-600">
-						これまでの投げ銭の送受信履歴を確認できます
+						これまでの支援の送受信履歴を確認できます
 					</p>
 				</div>
 
@@ -226,7 +226,7 @@
 						></path>
 					</svg>
 					<p class="text-lg">まだアクティビティがありません</p>
-					<p class="mt-2 text-sm">投げ銭を始めると、ここに履歴が表示されます</p>
+					<p class="mt-2 text-sm">支援を始めると、ここに履歴が表示されます</p>
 				</div>
 			</div>
 		</div>
