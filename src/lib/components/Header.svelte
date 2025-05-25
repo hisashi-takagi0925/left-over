@@ -9,8 +9,11 @@
 		<div class="flex h-16 items-center justify-between">
 			<!-- ロゴ -->
 			<div class="flex items-center">
-				<a href="/" class="text-2xl font-bold text-blue-600 transition-colors hover:text-blue-700">
-					寄付プラットフォーム
+				<a
+					href="/"
+					class="text-2xl font-bold text-orange-600 transition-colors hover:text-orange-700"
+				>
+					💝 困ったときはお互い様
 				</a>
 			</div>
 
@@ -18,18 +21,18 @@
 			<nav class="hidden items-center space-x-8 md:flex">
 				<a
 					href="/top"
-					class="font-medium text-gray-700 transition-colors hover:text-blue-600 {$page.url
+					class="font-medium text-gray-700 transition-colors hover:text-orange-600 {$page.url
 						.pathname === '/top'
-						? 'text-blue-600'
+						? 'text-orange-600'
 						: ''}"
 				>
 					支援案件
 				</a>
 				<a
 					href="/new"
-					class="font-medium text-gray-700 transition-colors hover:text-blue-600 {$page.url
+					class="font-medium text-gray-700 transition-colors hover:text-orange-600 {$page.url
 						.pathname === '/new'
-						? 'text-blue-600'
+						? 'text-orange-600'
 						: ''}"
 				>
 					支援募集
@@ -82,7 +85,7 @@
 				{:else}
 					<button
 						on:click={login}
-						class="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+						class="rounded-md bg-orange-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-orange-700"
 					>
 						ログイン
 					</button>
@@ -90,6 +93,7 @@
 
 				<!-- モバイルメニューボタン -->
 				<button
+					aria-label="メニューを開く"
 					class="rounded-md p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 md:hidden"
 				>
 					<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

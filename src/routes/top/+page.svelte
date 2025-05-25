@@ -218,7 +218,7 @@
 	<div class="fixed right-6 bottom-6">
 		<button
 			on:click={() => goto('/new')}
-			class="rounded-full bg-blue-600 px-6 py-3 font-bold text-white shadow-lg transition-colors hover:bg-blue-700"
+			class="rounded-full bg-orange-600 px-6 py-3 font-bold text-white shadow-lg transition-colors hover:bg-orange-700"
 		>
 			+ 支援を募集
 		</button>
